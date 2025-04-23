@@ -37,7 +37,7 @@ def generate_page(from_path, template_path, dest_path, basepath):
     #print(f"tempalte : {template_file}")
 
     #replace  {{title}} and {{content}} placeholders with html and the title we grabbed
-    replaced_template = template_file.replace("{{ Title }}", title).replace("{{ Content }}", html_string).replace('href="/', "{basepath}").replace('src="/', "{basepath}")    
+    replaced_template = template_file.replace("{{ Title }}", title).replace("{{ Content }}", html_string).replace('href="/', f"{basepath}").replace('src="/', f"{basepath}")    
     
     #create full html file in dest_path and create needed dirs
     dir_name = os.path.dirname(dest_path)

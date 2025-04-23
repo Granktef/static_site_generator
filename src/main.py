@@ -37,7 +37,10 @@ def main():
     #     os.path.join(dir_path_public, "index.html")
     #     )
 
-    basepath = "/" if sys.argv[0] == None else sys.argv[0]
+    basepath = "/" if sys.argv[1] == "" else sys.argv[1]
+
+    print(f"base path : {basepath}")
+    print(f"sys args : {sys.argv}")
 
     print("Generating pages")
     generate_pages_recursive(
